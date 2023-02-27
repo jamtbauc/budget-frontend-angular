@@ -6,11 +6,10 @@ import { IBudgetData } from '../interfaces/IBudgetData';
   providedIn: 'root'
 })
 export class InMemoryDataService implements InMemoryDbService {
-
   createDb() {
     const budgetData: IBudgetData[] = [
       {
-        date: "2023-02-16",
+        date: "2023-02-15",
         bill: "McDonalds",
         amount: 12.37,
         remaining: 830.88
@@ -22,7 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
         remaining: 818.51
       },
       {
-        date: "2023-02-16",
+        date: "2023-02-17",
         bill: "Circle K",
         amount: 6.14,
         remaining: 793.51

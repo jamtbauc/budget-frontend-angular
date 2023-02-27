@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="text-center">{{ title }}</h3>
+            <div class="chart-container">
+                <canvas id="total-line-chart"></canvas>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button " class="btn btn-primary float-end" (click)="updateDates(-7)">
+                        <fa-icon [icon]="leftChevron" size="lg"></fa-icon>
+                        Previous Week
+                    </button>
+                </div>
+                <div class="col">
+                    <h4 class="text-center">
+                        {{ displayWeekStart }} - {{ displayWeekEnd }}
+                    </h4>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary float-start" (click)="updateDates(7)">
+                        Next Week
+                        <fa-icon [icon]="rightChevron" size="lg"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,12 +5,14 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { InMemoryDataService } from './services/in-memory-data.service';
+import { WeeklyChartComponent } from './components/weekly-chart/weekly-chart.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WeeklyChartComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import { InMemoryDataService } from './services/in-memory-data.service';
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
